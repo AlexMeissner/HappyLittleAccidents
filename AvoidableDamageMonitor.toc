@@ -1,0 +1,6 @@
+## Interface: 90002
+## Title: AvoidableDamageMonitor
+## Notes: Monitor window displaying damage which could be avoided
+
+AvoidableDamageMonitor.lua
+Data.lua
