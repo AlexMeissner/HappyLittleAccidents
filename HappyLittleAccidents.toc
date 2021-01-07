@@ -1,0 +1,6 @@
+## Interface: 90002
+## Title: Happy Little Accidents
+## Notes: Monitor little mistakes which could be avoided
+
+HappyLittleAccidents.lua
+Data.lua
