@@ -1,0 +1,112 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/..\FrameXML\UI.xsd">
+    <Frames>
+<!-- AccidentsFrame
+[+] Parent
+[+] SetPoint
+[+] SetSize
+[+] SetMinResize
+[+] SetResizable
+[+] SetMovable
+[+] SetClampedToScreen
+[+] SetBackdrop
+[+] SetBackdropBorderColor
+[-] SetScript
+-->
+        <Frame name="AccidentsFrame" parent="UIParent" inherits="DialogBoxFrame" resizable="true" movable="true" clampedToScreen="true">
+            <Anchors>
+                <Anchor point="CENTER" />
+            </Anchors>
+            <Size>
+                <AbsDimension x="400" y="400" />
+            </Size>
+            <ResizeBounds>
+                <minResize x="400" y="150"/>
+            </ResizeBounds>
+            <Backdrop bgFile = "Interface\\DialogFrame\\UI-DialogBox-Background", edgeFile = "Interface\\PVPFrame\\UI-Character-PVP-Highlight">
+                <BackgroundInsets>
+                    <AbsInset left="6" right="6" top="8" bottom="8"/>
+                </BackgroundInsets>
+                <EdgeSize>
+				    <AbsValue val="16"/>
+			    </EdgeSize>
+                <BorderColor a="1" r="0" g="0" b="0" />
+            </Backdrop>
+        </Frame>
+
+<!-- AccidentsEditFrame
+[+] SetSize
+[+] SetPoint
+[+] SetPoint
+[+] SetInsertMode
+[+] SetFading
+[+] SetMaxLines
+[-] SetIndentedWordWrap
+[-] SetFontObject
+[+] SetJustifyH
+[-] RegisterEvent
+[-] SetScript
+-->
+        <ScrollingMessageFrame name="AccidentsEditFrame" parent="AccidentsFrame" fade="false" maxlines="500" insertMode="SCROLLING_MESSAGE_FRAME_INSERT_MODE_TOP">
+            <Anchors>
+                <Anchor point="TOPLEFT">
+                    <Offset>
+                        <AbsDimension x="10" y="-10" />
+                    </Offset>
+                </Anchor>
+                <Anchor point="BOTTOMRIGHT">
+                    <Offset>
+                        <AbsDimension x="-30" y="10" />
+                    </Offset>
+                </Anchor>
+            </Anchors>
+            <Size>
+                <AbsDimension x="360" y="300" />
+            </Size>
+            <FontString justifyH="LEFT"/>
+        </ScrollingMessageFrame>
+
+<!-- AccidentsScrollFrame
+[+] SetPoint
+[+] SetPoint
+[-] SetScript
+-->
+        <ScrollFrame name="AccidentsScrollFrame" parent="AccidentsFrame" inherits="FauxScrollFrameTemplate">
+            <Anchors>
+                <Anchor point="TOPLEFT">
+                    <Offset>
+                        <AbsDimension x="10" y="-10" />
+                    </Offset>
+                </Anchor>
+                <Anchor point="BOTTOMRIGHT">
+                    <Offset>
+                        <AbsDimension x="-30" y="10" />
+                    </Offset>
+                </Anchor>
+            </Anchors>
+        </ScrollFrame>
+
+<!-- AccidentsResizeButton
+[+] SetPoint
+[+] SetSize
+[+] SetNormalTexture
+[+] SetHighlightTexture
+[+] SetPushedTexture
+[-] SetScript
+-->
+        <Button name="AccidentsResizeButton" parent="AccidentsFrame">
+            <Anchors>
+                <Anchor point="BOTTOMRIGHT">
+                    <Offset>
+                        <AbsDimension x="-6" y="7" />
+                    </Offset>
+                </Anchor>
+            </Anchors>
+            <Size>
+                <AbsDimension x="16" y="16" />
+            </Size>
+            <NormalTexture file="Interface\\ChatFrame\\UI-ChatIM-SizeGrabber-Up" />
+            <HighlightTexture file="Interface\\ChatFrame\\UI-ChatIM-SizeGrabber-Highlight" />
+            <PushedTexture file="Interface\\ChatFrame\\UI-ChatIM-SizeGrabber-Down" />
+        </Button>
+    </Frames>
+</Ui>

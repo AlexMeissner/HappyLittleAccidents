@@ -1,6 +1,8 @@
 ## Interface: 90002
 ## Title: Happy Little Accidents
 ## Notes: Monitor little mistakes which could be avoided
+## SavedVariables: HLA_RECORD
 
 HappyLittleAccidents.lua
 Data.lua
+AbilityRecord.lua
